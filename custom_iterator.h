@@ -47,7 +47,7 @@ namespace CS2312 {
 
             pointer __ptr;
 
-        };
+        };//iterator
 
         class const_iterator {
 
@@ -72,10 +72,10 @@ namespace CS2312 {
 
             pointer __ptr;
 
-        };
+        };//const_iterator
 
 
-        fixed_array(size_type size) { [size]};
+        fixed_array(size_type size) { };
 
         fixed_array(std::initializer_list<T> list);
 
