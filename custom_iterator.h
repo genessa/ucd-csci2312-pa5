@@ -115,12 +115,14 @@ namespace CS2312 {
 
         fixed_array(size_type size) { __size = size; __data = new T[__size];};
 
-        fixed_array(std::initializer_list<T> list) //: fixed_array(list)  // something with a for loop, and size
+        fixed_array(std::initializer_list<T> list) : __size(list.size()),
+        __data(new T[__size])
         {
-            std::copy(list.begin(), list.end(), __size); }
+            std::copy(std::begin(list), std::end(list), __data);
+        }
          //seriously, that's all?
 
-        ~fixed_array() {}
+        ~fixed_array() { delete __data; }
 
         size_type size() const { return __size; }
 
