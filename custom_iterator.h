@@ -139,7 +139,7 @@ namespace CS2312 {
                 return __data[index];
         }
 
-        inline iterator begin()
+        inline iterator begin() // adding a comment to shut up github
         {
             return iterator(__data);
         }
