@@ -75,7 +75,7 @@ namespace CS2312 {
         };
 
 
-        fixed_array(size_type size);
+        fixed_array(size_type size) { [size]};
 
         fixed_array(std::initializer_list<T> list);
 
